@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+   <constant name="struts.devMode" value="true" />
+<package name="testing" extends="struts-default">
+
+  <interceptors>
+         <interceptor name="TestInterceptor"
+            class="com.mj.test.TestIntercepter" />
+      </interceptors>
+  <action name="test" class="com.mj.test.TestAction" method="execute">
+          
+	<result name="success">/jsp/sales/InitiateVisit.jsp</result>
+	
+  </action>
+ </package>
+ 
+</struts>
+ 
